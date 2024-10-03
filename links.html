@@ -1,0 +1,39 @@
+http://localhost:8000/auth/register
+
+{
+    "name": "moshe",
+    "email": "fleidmos@gmail.com",
+    "password": "123"
+}
+
+{
+    "status": 201,
+    "success": true,
+    "message": " User created Successfully",
+    "user": {
+        "name": "moshe",
+        "email": "fleidmos@gmail.com",
+        "password": "123",
+        "_id": "66fef248197a91a158b66e9f",
+        "createdAt": "2024-10-03T19:36:40.148Z",
+        "updatedAt": "2024-10-03T19:36:40.148Z",
+        "__v": 0
+    }
+}
+
+
+/***********************/
+
+http://localhost:8000/auth/login
+
+{
+    "email": "fleidmos@gmail.com",
+    "password": "123"
+}
+
+{
+    "status": 200,
+    "success": true,
+    "message": "login success",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmZlZjI0ODE5N2E5MWExNThiNjZlOWYiLCJlbWFpbCI6ImZsZWlkbW9zQGdtYWlsLmNvbSIsImlhdCI6MTcyNzk4NDQwMiwiZXhwIjoxNzI4MDcwODAyfQ.shunhujwFIL9Cl9ifGd1MEJxjWZoo65adcwygq1yAm8"
+}
