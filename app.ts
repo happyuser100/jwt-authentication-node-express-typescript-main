@@ -157,6 +157,26 @@ app.post("/auth/login", async (req, res) => {
   }
 });
 
+app.get("/users", async (req, res) => {
+  try {
+    const users = await User.find();
+    if (users) {
+        res.status(200).json(users);
+    } else {
+            res.status(404).json({
+                message: "Not found.",
+            })
+   }
+  }
+   catch (error: any) {
+    // Send the error message to the client
+    res.status(400).json({
+      status: 400,
+      message: error.message.toString(),
+    });
+  }
+});
+
 // Listen the server
 app.listen(PORT, async () => {
   console.log(`🗄️  Server Fire on http:localhost//${PORT}`);
